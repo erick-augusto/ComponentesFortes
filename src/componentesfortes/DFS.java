@@ -35,5 +35,15 @@ public class DFS {
         if(g.vertices[u.getIndice()].cor == Cores.CINZA){
             System.out.println("Cinza");
         }
+        for(i=0;i<g.listasDeAdjacencia[id].size();i++){
+            System.out.println("Adj do vértice "+u.getNome()+":");
+            Arco a = (Arco) g.listasDeAdjacencia[id].get(i);
+            int index = a.getDestino().getIndice();
+            if(g.vertices[index].cor == Cores.BRANCO){
+                System.out.println("Chamando vértice: "+g.vertices[index].getNome());
+                visitaBFS(g, g.vertices[index]);
+                System.out.println("Voltando para o vértice: "+u.getNome());
+            }
+        }
     }
 }
