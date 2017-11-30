@@ -23,4 +23,17 @@ public class DFS {
         return tempo;
     }
     
+    public void visitaBFS(Grafo g, Vertice u){
+        int i;
+        tempo ++;
+        u.d = tempo;
+        u.cor = Cores.CINZA;
+        int id = u.getIndice();
+        System.out.println("Tempo de início do vértice "+u.getNome()+" ("+tempo+")");        
+        g.vertices[u.getIndice()].d = tempo;
+        g.vertices[u.getIndice()].cor = Cores.CINZA;
+        if(g.vertices[u.getIndice()].cor == Cores.CINZA){
+            System.out.println("Cinza");
+        }
+    }
 }
