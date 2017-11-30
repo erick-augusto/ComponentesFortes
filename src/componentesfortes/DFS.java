@@ -45,5 +45,9 @@ public class DFS {
                 System.out.println("Voltando para o vértice: "+u.getNome());
             }
         }
+        tempo ++;
+        System.out.println("Tempo de fim do vértice "+u.getNome()+" ("+tempo+")");
+        g.vertices[u.getIndice()].f = tempo;
+        g.vertices[u.getIndice()].cor = Cores.PRETO;
     }
 }
