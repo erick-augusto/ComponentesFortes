@@ -29,24 +29,24 @@ public class DFS {
         u.d = tempo;
         u.cor = Cores.CINZA;
         int id = u.getIndice();
-        System.out.println("Tempo de início do vértice "+u.getNome()+" ("+tempo+")");        
+        //System.out.println("Tempo de início do vértice "+u.getNome()+" ("+tempo+")");        
         g.vertices[u.getIndice()].d = tempo;
         g.vertices[u.getIndice()].cor = Cores.CINZA;
-        if(g.vertices[u.getIndice()].cor == Cores.CINZA){
+        /*if(g.vertices[u.getIndice()].cor == Cores.CINZA){
             System.out.println("Cinza");
-        }
+        }*/
         for(i=0;i<g.listasDeAdjacencia[id].size();i++){
-            System.out.println("Adj do vértice "+u.getNome()+":");
+            //System.out.println("Adj do vértice "+u.getNome()+":");
             Arco a = (Arco) g.listasDeAdjacencia[id].get(i);
             int index = a.getDestino().getIndice();
             if(g.vertices[index].cor == Cores.BRANCO){
-                System.out.println("Chamando vértice: "+g.vertices[index].getNome());
+                //System.out.println("Chamando vértice: "+g.vertices[index].getNome());
                 visitaBFS(g, g.vertices[index]);
-                System.out.println("Voltando para o vértice: "+u.getNome());
+                //System.out.println("Voltando para o vértice: "+u.getNome());
             }
         }
         tempo ++;
-        System.out.println("Tempo de fim do vértice "+u.getNome()+" ("+tempo+")");
+        //System.out.println("Tempo de fim do vértice "+u.getNome()+" ("+tempo+")");
         g.vertices[u.getIndice()].f = tempo;
         g.vertices[u.getIndice()].cor = Cores.PRETO;
     }
