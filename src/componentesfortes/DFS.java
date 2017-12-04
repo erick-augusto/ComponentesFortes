@@ -50,4 +50,13 @@ public class DFS {
         g.vertices[u.getIndice()].f = tempo;
         g.vertices[u.getIndice()].cor = Cores.PRETO;
     }
+    
+    public void ordemDecrescente(Grafo g){
+        tempo = 0;
+        int i,j;
+        int cont = 0;
+        Vertice aux;
+        Vertice finalizacao[] = new Vertice[g.totalDeVertices];
+        
+    }
 }
