@@ -57,6 +57,11 @@ public class DFS {
         int cont = 0;
         Vertice aux;
         Vertice finalizacao[] = new Vertice[g.totalDeVertices];
+        //Ordeando em ordem decrescente de finalização
+        for (i = 0; i < g.vertices.length; i++) {
+            finalizacao[i] = g.vertices[i];
+            System.out.println("Finalização: "+finalizacao[i].getNome()+"("+finalizacao[i].f+")");
+        }
         
     }
 }
