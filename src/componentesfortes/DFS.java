@@ -62,6 +62,15 @@ public class DFS {
             finalizacao[i] = g.vertices[i];
             System.out.println("Finalização: "+finalizacao[i].getNome()+"("+finalizacao[i].f+")");
         }
+        for(i = 1; i < g.totalDeVertices; i++){
+            aux = finalizacao[i];
+            j = i -1;
+            while((j>=0) && (finalizacao[j].f<aux.f)){
+                finalizacao[j+1] = finalizacao[j];
+                j--;
+            }
+            finalizacao[j+1] = aux;
+        }
         
     }
 }
