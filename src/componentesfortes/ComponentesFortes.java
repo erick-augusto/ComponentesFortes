@@ -18,7 +18,11 @@ public class ComponentesFortes {
         //Leitura do teclado
         Grafo g = new Grafo();
         g.leDoTeclado();
-        g.imprimeNaTela();
+        //g.imprimeNaTela();
+        
+        DFS dfs = new DFS();
+        int componentes = dfs.achaComponetes(g);
+        System.out.println(componentes);
     }
     
 }
