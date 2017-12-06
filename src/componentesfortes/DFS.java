@@ -74,5 +74,9 @@ public class DFS {
         for (i = 0; i < g.vertices.length; i++) {
             System.out.println("Finalização: "+finalizacao[i].getNome()+"("+finalizacao[i].f+")");
         }
+        Grafo gt = g.getGrafoTransposto();
+        for (i = 0; i < gt.vertices.length; i++) {
+            gt.vertices[i].cor = Cores.BRANCO;
+        }
     }
 }
