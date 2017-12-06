@@ -22,7 +22,9 @@ public class ComponentesFortes {
         
         DFS dfs = new DFS();
         int componentes = dfs.achaComponetes(g);
-        System.out.println(componentes);
+        //System.out.println(componentes);
+
+        dfs.ordemDecrescente(g);
     }
     
 }

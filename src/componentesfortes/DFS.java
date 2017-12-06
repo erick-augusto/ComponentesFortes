@@ -71,6 +71,8 @@ public class DFS {
             }
             finalizacao[j+1] = aux;
         }
-        
+        for (i = 0; i < g.vertices.length; i++) {
+            System.out.println("Finalização: "+finalizacao[i].getNome()+"("+finalizacao[i].f+")");
+        }
     }
 }
