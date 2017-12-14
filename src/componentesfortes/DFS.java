@@ -78,5 +78,9 @@ public class DFS {
         for (i = 0; i < gt.vertices.length; i++) {
             gt.vertices[i].cor = Cores.BRANCO;
         }
+        for (i = 0; i < gt.vertices.length; i++) {
+            int id = finalizacao[i].getIndice();
+            System.out.println("Finalização id: "+finalizacao[i].getNome());
+        }
     }
 }
