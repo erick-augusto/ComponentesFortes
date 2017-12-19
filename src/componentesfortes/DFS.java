@@ -87,7 +87,7 @@ public class DFS {
                 cont ++;
             }
         }     
-        System.out.println("Cont :"+cont);
-        //System.out.println(cont);
+        //System.out.println("Cont :"+cont);
+        System.out.println(cont);
     }
 }
