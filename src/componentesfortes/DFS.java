@@ -60,7 +60,7 @@ public class DFS {
         //Ordeando em ordem decrescente de finalização
         for (i = 0; i < g.vertices.length; i++) {
             finalizacao[i] = g.vertices[i];
-            System.out.println("Finalização: "+finalizacao[i].getNome()+"("+finalizacao[i].f+")");
+            //System.out.println("Finalização: "+finalizacao[i].getNome()+"("+finalizacao[i].f+")");
         }
         for(i = 1; i < g.totalDeVertices; i++){
             aux = finalizacao[i];
@@ -71,18 +71,18 @@ public class DFS {
             }
             finalizacao[j+1] = aux;
         }
-        for (i = 0; i < g.vertices.length; i++) {
+        /*for (i = 0; i < g.vertices.length; i++) {
             System.out.println("Finalização: "+finalizacao[i].getNome()+"("+finalizacao[i].f+")");
-        }
+        }*/
         Grafo gt = g.getGrafoTransposto();
         for (i = 0; i < gt.vertices.length; i++) {
             gt.vertices[i].cor = Cores.BRANCO;
         }
         for (i = 0; i < gt.vertices.length; i++) {
             int id = finalizacao[i].getIndice();
-            System.out.println("Finalização id: "+finalizacao[i].getNome());
+            //System.out.println("Finalização id: "+finalizacao[i].getNome());
             if(gt.vertices[id].cor == Cores.BRANCO){
-                System.out.println("Entrando na recursão...");
+                //System.out.println("Entrando na recursão...");
                 visitaBFS(gt, gt.vertices[id]);
                 cont ++;
             }
