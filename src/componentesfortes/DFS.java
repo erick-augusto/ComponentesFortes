@@ -86,6 +86,8 @@ public class DFS {
                 visitaBFS(gt, gt.vertices[id]);
                 cont ++;
             }
-        }
+        }     
+        System.out.println("Cont :"+cont);
+        //System.out.println(cont);
     }
 }
