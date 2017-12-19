@@ -81,6 +81,11 @@ public class DFS {
         for (i = 0; i < gt.vertices.length; i++) {
             int id = finalizacao[i].getIndice();
             System.out.println("Finalização id: "+finalizacao[i].getNome());
+            if(gt.vertices[id].cor == Cores.BRANCO){
+                System.out.println("Entrando na recursão...");
+                visitaBFS(gt, gt.vertices[id]);
+                cont ++;
+            }
         }
     }
 }
